@@ -1,268 +1,282 @@
-web application/stitch/projects/7572994565403483303/screens/d6edff87edfa41eeb9ce29bc3271217d
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InAmigos Foundation | Official Website</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Montserrat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>InAmigos Foundation | Youth-Led Impact Movement</title>
+    <!-- Google Fonts: Montserrat + Plus Jakarta Sans for modern flair -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS for Layout (Utility classes) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00e0ff',
-                        surface: '#faf8ff',
-                        'surface-dim': '#d2d9f4',
-                        'on-surface': '#1b1b21',
-                        'on-surface-variant': '#46464f',
-                        'outline-variant': '#c7c5d0',
-                        'surface-container-lowest': '#ffffff',
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-surface text-on-surface font-sans antialiased">
+<body>
 
-    <!-- Navigation -->
-    <nav class="nav-sticky fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/30">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="logo.png" alt="InAmigos Foundation Logo" class="h-10 w-auto md:h-12">
-                <span class="text-xl md:text-2xl font-black text-on-surface tracking-tight">InAmigos Foundation</span>
+    <!-- Navigation (Fully Responsive) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <div class="logo-icon">IA</div>
+                <span class="logo-text">InAmigos Foundation</span>
             </div>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="text-on-surface-variant hover:text-primary transition-colors font-semibold">About</a>
-                <a href="#projects" class="text-on-surface-variant hover:text-primary transition-colors font-semibold">Projects</a>
-                <a href="#impact" class="text-on-surface-variant hover:text-primary transition-colors font-semibold">Impact</a>
-                <button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20">Join Us</button>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#impact" class="nav-link">Impact</a>
+                <button class="btn-join">Join Us</button>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <div class="md:hidden">
-                <button class="text-on-surface p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
             </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#impact">Impact</a>
+            <button class="btn-join-mobile">Join Us</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <span class="bg-yellow-100 text-yellow-800 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 inline-block">⚡ Gen-Z Led Impact</span>
-                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">Empowering Youth, <span class="text-primary">Impacting Lives.</span></h1>
-                <p class="text-lg text-on-surface-variant mb-8 max-w-lg leading-relaxed">India's premier youth-led NGO platform where social service meets modern connectivity. We're building a decentralized network of change-makers.</p>
-                <div class="flex flex-wrap gap-4">
-                    <button class="bg-primary text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl shadow-primary/30 hover:scale-105 transition-transform">Become an InAmigo</button>
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+                <span class="hero-badge">⚡ Gen-Z Led Impact</span>
+                <h1 class="hero-title">Empowering Youth, <span class="hero-accent">Impacting Lives.</span></h1>
+                <p class="hero-desc">India's premier youth-led NGO platform where social service meets modern connectivity. We're building a decentralized network of change-makers.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Become an InAmigo</button>
+                    <button class="btn-outline">Explore Projects →</button>
                 </div>
             </div>
-            <div class="order-1 md:order-2">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full"></div>
-                    <img src="hero.jpg" alt="Smiling Youth" class="relative rounded-[40px] shadow-2xl w-full object-cover aspect-[4/3] md:aspect-auto">
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="900">
+                <div class="image-glow"></div>
+                <div class="hero-img-wrapper">
+                    <img src="hero.jpg" alt="Volunteers smiling" class="hero-img">
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Identity Section (Among Friends) -->
-    <section id="about" class="py-24 bg-white relative overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="background.jpg" alt="Background" class="w-full h-full object-cover opacity-10">
-        </div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Our Identity</span>
-            <h2 class="text-4xl md:text-5xl font-black mb-10">Among Friends: Our Story</h2>
-            <p class="text-xl md:text-2xl leading-relaxed text-on-surface-variant font-medium">
-                InAmigos Foundation is a youth-led movement redefining social impact for the digital age. We've transformed the traditional NGO model into a decentralized, community-driven network where change happens through friendship and collective action. We believe that when young minds unite, impact isn't just a goal—it's a movement.
-            </p>
+    <section id="about" class="identity">
+        <div class="identity-bg-pattern"></div>
+        <div class="container">
+            <div class="identity-inner" data-aos="fade-up">
+                <span class="section-tag">Our Identity</span>
+                <h2 class="section-title">Among Friends: Our Story</h2>
+                <div class="identity-card">
+                    <p class="identity-text">InAmigos Foundation is a youth-led movement redefining social impact for the digital age. We've transformed the traditional NGO model into a decentralized, community-driven network where change happens through friendship and collective action. We believe that when young minds unite, impact isn't just a goal—it's a movement.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-            <div>
-                <span class="text-purple-600 font-bold uppercase tracking-widest text-sm mb-2 block">Active Initiatives</span>
-                <h2 class="text-4xl font-black">Ongoing Projects</h2>
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-header" data-aos="fade-right">
+                <div>
+                    <span class="section-tag purple">Active Initiatives</span>
+                    <h2 class="section-title">Ongoing Projects</h2>
+                </div>
+                <a href="#" class="view-all">View All Projects <span>→</span></a>
             </div>
-            <a href="#" class="text-primary font-bold flex items-center gap-2 hover:underline group">
-                View All Projects <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project Card SEVA -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-seva.jpg" alt="Project SEVA" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">SEVA</span>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="card-img">
+                        <img src="project-seva.jpg" alt="SEVA Project">
+                        <span class="card-badge primary">SEVA</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project SEVA</h3>
+                        <p>Providing food, clothing, and support to underprivileged families and communities across 5 cities.</p>
+                    </div>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project SEVA</h3>
-                    <p class="text-on-surface-variant">Providing food, clothing, and support to underprivileged families and communities.</p>
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img">
+                        <img src="project-education.jpg" alt="Education">
+                        <span class="card-badge blue">Education</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project BACHPANSHALA</h3>
+                        <p>Delivering quality education, digital literacy, and life skills training for children in rural sectors.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Project Card BACHPANSHALA -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-education.jpg" alt="Project BACHPANSHALA" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Education</span>
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="project-jeev.jpg" alt="Animal Welfare">
+                        <span class="card-badge orange">Welfare</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project JEEV</h3>
+                        <p>Supporting stray animals through feeding, medical care, and shelter awareness programs.</p>
+                    </div>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project BACHPANSHALA</h3>
-                    <p class="text-on-surface-variant">Delivering quality education, digital literacy, and life skills training for children.</p>
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="card-img">
+                        <img src="project-udaan.jpeg" alt="Women Empowerment">
+                        <span class="card-badge purple-dark">Empowerment</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project UDAAN</h3>
+                        <p>Empowering women through education, skill development, and financial literacy initiatives.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Project Card JEEV -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-jeev.jpg" alt="Project JEEV" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Welfare</span>
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-img">
+                        <img src="project-prakriti.jpg" alt="Eco Initiative">
+                        <span class="card-badge green">Eco</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project PRAKRITI</h3>
+                        <p>Promoting environmental sustainability through tree plantation drives and plastic-free campaigns.</p>
+                    </div>
                 </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project JEEV</h3>
-                    <p class="text-on-surface-variant">Supporting stray animals through feeding, care, and welfare programs.</p>
-                </div>
-            </div>
-
-            <!-- Project Card UDAAN -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-udaan.jpeg" alt="Project UDAAN" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Empowerment</span>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project UDAAN</h3>
-                    <p class="text-on-surface-variant">Empowering women through education, skill development, and awareness initiatives.</p>
-                </div>
-            </div>
-
-            <!-- Project Card PRAKRITI -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-prakriti.jpg" alt="Project PRAKRITI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Eco</span>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project PRAKRITI</h3>
-                    <p class="text-on-surface-variant">Promoting environmental sustainability through tree plantation and conservation.</p>
-                </div>
-            </div>
-
-            <!-- Project Card VIKAS -->
-            <div class="project-card bg-white rounded-3xl overflow-hidden shadow-sm border border-outline-variant/20 group">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="project-vikas.jpg" alt="Project VIKAS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <span class="absolute top-4 right-4 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Skills</span>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold mb-3">Project VIKAS</h3>
-                    <p class="text-on-surface-variant">Providing internships and skill development opportunities for youth.</p>
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="project-vikas.jpg" alt="Skill Development">
+                        <span class="card-badge cyan">Skills</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Project VIKAS</h3>
+                        <p>Providing internships and skill development opportunities for youth to build future careers.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Featured Project (Digital Inclusion) -->
-        <div class="mt-16 relative rounded-[40px] overflow-hidden min-h-[450px] flex items-center">
-            <img src="project-digital.jpg" alt="Digital Inclusion" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
-            <div class="relative z-10 px-8 md:px-16 max-w-2xl text-white py-12">
-                <div class="flex items-center gap-2 mb-4">
-                    <span class="text-yellow-400">&starf;</span>
-                    <span class="text-sm font-bold uppercase tracking-widest">Flagship Initiative</span>
+            <!-- Featured Project (Digital Inclusion) -->
+            <div class="featured-project" data-aos="zoom-in">
+                <div class="featured-overlay"></div>
+                <img src="project-digital.jpg" alt="Digital Inclusion" class="featured-bg">
+                <div class="featured-content">
+                    <div class="flag-badge"><span>★</span> Flagship Initiative</div>
+                    <h2>Digital Inclusion Project</h2>
+                    <p>Refurbishing donated tablets and laptops to create digital classrooms for rural schools. Bridging the gap between technology and education.</p>
+                    <button class="btn-featured">Learn About Inclusion →</button>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Digital Inclusion Project</h2>
-                <p class="text-lg mb-8 text-white/90 leading-relaxed">Refurbishing donated tablets and laptops to create digital classrooms for rural schools. Bridging the gap between technology and education.</p>
-                <button class="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition-all shadow-lg">Learn About Inclusion</button>
             </div>
         </div>
     </section>
 
     <!-- Impact Stats Section -->
-    <section id="impact" class="py-24 bg-[#d2d9f4]/20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Our Impact</span>
-                <h2 class="text-4xl font-black">Making a Difference Together</h2>
+    <section id="impact" class="impact">
+        <div class="container">
+            <div class="impact-header" data-aos="fade-up">
+                <span class="section-tag">Our Impact</span>
+                <h2 class="section-title">Making a Difference Together</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div class="impact-item p-8 bg-white rounded-[32px] shadow-sm border border-outline-variant/10">
-                    <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-bold">5K</div>
-                    <h3 class="text-5xl font-black mb-2">5,000+</h3>
-                    <p class="text-on-surface-variant font-bold uppercase tracking-widest text-sm">Students Educated</p>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="flip-left">
+                    <div class="stat-icon">📚</div>
+                    <h3>5,000+</h3>
+                    <p>Students Educated</p>
                 </div>
-                <div class="impact-item p-8 bg-white rounded-[32px] shadow-sm border border-outline-variant/10">
-                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-bold">10K</div>
-                    <h3 class="text-5xl font-black mb-2">10,000+</h3>
-                    <p class="text-on-surface-variant font-bold uppercase tracking-widest text-sm">Trees Planted</p>
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="stat-icon">🌳</div>
+                    <h3>10,000+</h3>
+                    <p>Trees Planted</p>
                 </div>
-                <div class="impact-item p-8 bg-white rounded-[32px] shadow-sm border border-outline-variant/10">
-                    <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl font-bold">50</div>
-                    <h3 class="text-5xl font-black mb-2">50+</h3>
-                    <p class="text-on-surface-variant font-bold uppercase tracking-widest text-sm">Action Days</p>
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="stat-icon">🤝</div>
+                    <h3>50+</h3>
+                    <p>Action Days</p>
                 </div>
+            </div>
+            <div class="impact-footnote" data-aos="fade-up">
+                <p>✨ 125+ active volunteers across 12 states ✨</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-outline-variant/30 pt-24 pb-12 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="lg:col-span-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="logo.png" alt="InAmigos Logo" class="h-10">
-                        <h3 class="text-3xl font-black">InAmigos</h3>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-flex">
+                        <div class="logo-icon small">IA</div>
+                        <h3>InAmigos Foundation</h3>
                     </div>
-                    <p class="text-lg text-on-surface-variant max-w-md leading-relaxed">
-                        Redefining youth social impact for the digital age. Empowered by young minds, built for the community, and dedicated to lasting change.
-                    </p>
-                    <div class="mt-8 flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center hover:bg-primary hover:text-white transition-colors">IG</a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center hover:bg-primary hover:text-white transition-colors">LN</a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center hover:bg-primary hover:text-white transition-colors">YT</a>
+                    <p>Redefining youth social impact for the digital age. Empowered by young minds, built for the community, and dedicated to lasting change.</p>
+                    <div class="social-links">
+                        <a href="#" class="social">IG</a>
+                        <a href="#" class="social">LN</a>
+                        <a href="#" class="social">YT</a>
+                        <a href="#" class="social">X</a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-on-surface-variant">Quick Links</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#about" class="text-on-surface-variant hover:text-primary transition-colors">Our Story</a></li>
-                        <li><a href="#projects" class="text-on-surface-variant hover:text-primary transition-colors">Active Projects</a></li>
-                        <li><a href="#impact" class="text-on-surface-variant hover:text-primary transition-colors">Impact Stats</a></li>
-                        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Volunteer Portal</a></li>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#projects">Active Projects</a></li>
+                        <li><a href="#impact">Impact Stats</a></li>
+                        <li><a href="#">Volunteer Portal</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-on-surface-variant">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="text-on-surface-variant hover:text-primary transition-colors">Cookie Policy</a></li>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Transparency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">hello@inamigos.org</a></li>
+                        <li><a href="#">+91 98765 43210</a></li>
+                        <li><a href="#">New Delhi, India</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-on-surface-variant/60">
-                <p>&copy; 2024 InAmigos Foundation. Youth-led and community-driven. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <span>Designed for Internship Project</span>
-                    <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Production Ready</span>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InAmigos Foundation. Youth-led and community-driven. All rights reserved.</p>
+                <div class="badge-group">
+                    <span>🌟 Designed for Internship Project</span>
+                    <span class="live-badge"><span class="pulse-dot"></span> Production Ready</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true, offset: 20 });
+        // Mobile Menu Toggle
+        const toggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        toggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        });
+        // Smooth Scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (mobileMenu.classList.contains('active')) mobileMenu.classList.remove('active');
+                    if (toggle.classList.contains('active')) toggle.classList.remove('active');
+                }
+            });
+        });
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
 </body>
 </html>
