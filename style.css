@@ -1,0 +1,148 @@
+/* 
+   InAmigos Foundation - Official Website Stylesheet
+   Optimized for Internship Project Submission
+   Device: Responsive Desktop/Mobile
+*/
+
+:root {
+    --primary: #00e0ff;
+    --surface: #faf8ff;
+    --surface-dim: #d2d9f4;
+    --on-surface: #1b1b21;
+    --on-surface-variant: #46464f;
+    --outline-variant: #c7c5d0;
+    --white: #ffffff;
+    --transition-standard: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation */
+.nav-sticky {
+    transition: var(--transition-standard);
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Hero Section Styles */
+.hero-gradient-bg {
+    position: absolute;
+    inset: -1rem;
+    background: radial-gradient(circle, rgba(0, 224, 255, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    border-radius: 9999px;
+}
+
+/* Project Cards */
+.project-card {
+    transition: var(--transition-standard);
+    background: var(--white);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(199, 197, 208, 0.2);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.project-card img {
+    transition: transform 0.7s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Identity Section (Among Friends) */
+.identity-bg-overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-blur: 4px;
+}
+
+/* Impact Stats */
+.impact-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px -5px rgba(0, 224, 255, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    transition: var(--transition-standard);
+    box-shadow: 0 10px 15px -3px rgba(0, 224, 255, 0.3);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 224, 255, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--outline-variant);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--on-surface-variant);
+}
+
+/* Utilities */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.text-primary { color: var(--primary); }
+.bg-surface { background-color: var(--surface); }
+
+/* Animation Keyframes */
+@keyframes pulse-custom {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+
+.animate-pulse-custom {
+    animation: pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
